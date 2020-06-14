@@ -1,0 +1,90 @@
+html,
+body {
+  height: 99%;
+}
+
+@font-face {
+  font-family: 'Dos VGA';
+  src: URL('fonts/dosvga.ttf') format('truetype');
+}
+
+body {
+  background: #000082;
+  color: #FAFAFC;
+  font-family: Dos VGA;
+  font-size: 20px;
+  line-height: 22px;
+
+}
+
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.highlight {
+  color: #000082;
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #FAFAFC;
+  box-shadow: 10px 0 0 0 #FAFAFC, -10px 0 0 0 #FAFAFC;
+}
+
+.anykey {
+  text-align: center;
+}
+
+.item::before {
+  content: "* ";
+}
+
+a:link {
+  color: #FAFAFC;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #FAFAFC;
+  text-decoration: none;
+}
+
+a:hover {
+  box-shadow: 5px 0 0 0 #FAFAFC, -5px 0 0 0 #FAFAFC;
+  background-color: #FAFAFC;
+  color: #000082;
+  text-decoration: none;
+
+}
+
+.cursor {
+  animation: blinker steps(1) 200ms infinite alternate;
+  display: inline;
+}
+
+@keyframes blinker {
+
+  0% {
+    visibility: visible;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+.noselect {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

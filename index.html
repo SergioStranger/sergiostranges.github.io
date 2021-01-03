@@ -12,24 +12,45 @@
    <div class="wrapper">
       <div class="highlight">Personal Page</div>
       <br />
-      <div>If this is your first time seeing this screen, welcome to my personal page. There are no hard-to-load pages. I am Sergio Strangers, IT Specialist and Programmer. Continue:</div>
-      <br />
-      <div class="item"><a href="mailto:sergiostranges@yandex.ru?subject=Hello">Email me at sergiostranges@yandex.ru</a></div>
-      <div class="item"><a href="https://t.me/Xacker">Add me on Telegram</a></div>
-      <div class="item"><a href="https://github.com/sergiostranges">Visit my GitHub Page</a></div>
-      <div class="item"><a href="https://w2me.ru/it-blog/" target="_blank">Visit the partner site - W2ME.RU</a></div>
 
+      <div id="description"></div>
       <br />
-      <div>Check out my <a href="https://github.com/SergioStrangeS?tab=repositories">Repositories</a>:</div>
-      <div class="item"><a href="https://github.com/SergioStrangeS/DiscordWebhooks">Discord Webhooks</a></div>
-      <div class="item"><a href="https://github.com/SergioStrangeS/VkSearchBot">VkSearchBot</a></div>
-      <div class="item"><a href="https://github.com/SergioStrangeS/VkWeatherBot">VkWeatherBot</a></div>
-      <br />
-      <div class="anykey" id="pressanykey">
+
+      <div id="block-1" style='display: none;'>
+      	<div class="item"><a href="mailto:sergiostranges@yandex.ru?subject=Hello">Email me at sergiostranges@yandex.ru</a></div>
+	      <div class="item"><a href="https://t.me/Xacker">Add me on Telegram</a></div>
+	      <div class="item"><a href="https://github.com/sergiostranges">Visit my GitHub Page</a></div>
+	      <div class="item"><a href="https://w2me.ru/it-blog/" target="_blank">Visit the partner site - W2ME.RU</a></div>
+	      <br />
+      </div>
+
+      <div id="block-2" style='display: none;'>
+      	<div>Check out my <a href="https://github.com/SergioStrangeS?tab=repositories">Repositories</a>:</div>
+	      <div class="item"><a href="https://github.com/SergioStrangeS/DiscordWebhooks">Discord Webhooks</a></div>
+	      <div class="item"><a href="https://github.com/SergioStrangeS/VkSearchBot">VkSearchBot</a></div>
+	      <div class="item"><a href="https://github.com/SergioStrangeS/VkWeatherBot">VkWeatherBot</a></div>
+	      <br />
+      </div>
+
+      <div class="anykey" id="pressanykey" style='display: none;'>
          Press any key to continue
          <div class="cursor">_</div>
       </div>
    </div>
+
+  <script>
+		var description = "If this is your first time seeing this screen, welcome to my personal page. There are no hard-to-load pages. I am Sergio Strangers, IT Specialist and Programmer. Continue:";
+		var str = description.split("");
+		var el = document.getElementById('description');
+		(function animate() {
+			str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running);
+			var running = setTimeout(animate, 10);
+		})();
+		
+		setTimeout(() => { document.getElementById('block-1').style.display = 'block'; }, 4000);
+		setTimeout(() => { document.getElementById('block-2').style.display = 'block'; }, 5000);
+		setTimeout(() => { document.getElementById('pressanykey').style.display = 'block'; }, 5000);
+	</script>
    
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
    <script src="assets/js/snowscript.js"></script>

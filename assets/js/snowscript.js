@@ -76,20 +76,32 @@ for (i=0;i<=snowmax;i++) {
   document.write("<span id='s"+i+"' style='position:fixed;top:-"+snowmaxsize+"; color: #fff0;'>"+snowletter+"</span>")
 }
 
-$(document).keypress(function (key) {
-	if (key.which != 'null' && !isResizeble) {
-		initsnow();
-		document.getElementById('pressanykey').remove();
-		document.body.style.background = '#192335';
-		setTimeout(() => { 
-			var audio = new Audio(); // Создаём новый элемент Audio
-	  	audio.src = 'assets/sounds/MERHI - M-fi.mp3'; // Указываем путь к звуку "клика"
-	  	audio.autoplay = true; // Автоматически запускаем
-	  	audio.volume = 0.3; // Громкость
-	  	audio.currentTime = 0; // установить секунду
-		}, 1200);
-		
+$(document).keyup(function(e) {
+
+  console.log(e.key + ', ' + e.keyCode);
+
+});
+
+$(document).keyup(function (key) {
+
+	if (key.keyCode != 'null' && !isResizeble) {
+		var audio = new Audio(); // Создаём новый элемент Audio
+    if (key.keyCode == '35') {
+      audio.src = 'assets/sounds/Chika dance.mp3'; // Указываем путь к звуку "клика"
+      document.body.style.background = 'url("assets/img/index.jpg") no-repeat';
+      audio.volume = 0.3; // Громкость
+    }
+    else {
+      audio.src = 'assets/sounds/MERHI - M-fi.mp3'; // Указываем путь к звуку "клика"
+      document.body.style.background = '#192335';
+      audio.volume = 0.3; // Громкость
+    }
+    initsnow();
+    document.getElementById('pressanykey').remove();
+  	audio.autoplay = true; // Автоматически запускаем
+  	audio.currentTime = 0; // установить секунду
 
 		isResizeble = true;
 	}
+
 });

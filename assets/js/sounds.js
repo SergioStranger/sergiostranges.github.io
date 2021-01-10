@@ -1,22 +1,22 @@
 
 // Функция показывающая нажатие клавиши и код клавиши.
-// $(document).keyup(function(e) {
+$(document).keyup(function(e) {
 
-//   console.log(e.key + ', ' + e.keyCode);
+  // console.log(e.key + ', ' + e.keyCode);
 
-// });
+});
 
 $(document).keyup(function (key) {
 
   if (key.keyCode != 'null' && !isResizeble) {
     var audio = new Audio(); // Создаём новый элемент Audio
     if (key.keyCode == '35') { // активируем пасхалку
-      audio.src = 'assets/sounds/Chika dance.mp3'; // Указываем путь к sound
+      audio.src = 'assets/sounds/Monstor109 - Chika Dance.mp3'; // Указываем путь к sound
       document.getElementById('background-chika').style.background = 'url("assets/img/index.jpg")'
       document.getElementById('background-chika').style.backgroundPosition = 'cemter center'
       document.getElementById('background-chika').style.backgroundRepeat = 'no-repeat'
       document.getElementById('background-chika').style.backgroundSize = 'cover'
-      audio.volume = 0.3; // Громкость
+      audio.volume = 1; // Громкость
     } else {
       audio.src = 'assets/sounds/MERHI - M-fi.mp3'; // Указываем путь к sound
       document.body.style.background = '#192335';

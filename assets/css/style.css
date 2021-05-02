@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  background: #000082;
+  background: #0200ab;
   color: #FAFAFC;
   font-family: Consolas;
   font-size: 20px;
@@ -37,11 +37,13 @@ body {
 }
 
 .highlight {
-  color: #000;
+  color: #0200ab;
+  text-transform: uppercase;
+  font-weight: 600;
   width: 150px;
   margin: 0 auto;
   text-align: center;
-  background-color: #FAFAFC;
+  background-color: #c1c0c4;
   padding: 0px 10px 0px 10px;
 }
 

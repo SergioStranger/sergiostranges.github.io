@@ -2,64 +2,85 @@
 <html>
 
 <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   <title>Sergio Stranger's</title>
-   <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-   <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Sergio Stranger's</title>
+  <link rel="stylesheet" href="assets/css/preloader.css" type="text/css" />
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width">
 </head>
 
 <body class="index noselect">
- 	<div class="mouse-parallax">
-   		<div class="mouse-parallax-bg" id="background-chika"></div>
-	</div>
+
+  <div id="preloader" class="visible loader-body">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+    <div class="site-logo">
+      <figure id="logo">
+        <svg width="100%" height="100%" viewBox="0 0 148 128">
+          <defs>
+            <mask id="circle-mask">
+              <rect fill="white" width="100%" height="100%"></rect>
+              <circle id="logo-mask" fill="black" cx="120" cy="96" r="28"></circle>
+            </mask>
+          </defs>
+          <polygon id="logo-hexagon" fill="#00B4FF" points="64 128 8.574 96 8.574 32 64 0 119.426 32 119.426 96"
+            mask="url(#circle-mask)"></polygon>
+          <circle id="logo-circle" fill="#3F3C3C" cx="120" cy="96" r="20"></circle>
+        </svg>
+      </figure>
+      <div class="site-title">
+        <div id="logo-text" class="site-title-text">
+          sergios<span>.fun</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mouse-parallax">
+    <div class="mouse-parallax-bg" id="background-chika"></div>
+  </div>
   <div class="wrapper">
     <div class="highlight">Personal Page</div>
     <br />
 
-    <div id="description"></div>
+    <div id="description">
+      If this is your first time seeing this screen, welcome to my personal page. There are no hard-to-load pages. I
+      am
+      Sergio Strangers, IT Specialist and Programmer. Continue:
+    </div>
     <br />
 
-    <div id="block-1" style='display: none;'>
-    	<div class="item"><a href="mailto:sergiostranges@yandex.ru?subject=Hello">Email me at sergiostranges@yandex.ru</a></div>
+    <div id="block-1">
+      <div class="item"><a href="mailto:mail@sergios.fun?subject=Hello">Email me at mail@sergios.fun</a></div>
       <div class="item"><a href="https://t.me/Xacker">Add me on Telegram</a></div>
       <div class="item"><a href="https://github.com/sergiostranges">Visit my GitHub Page</a></div>
-      <div class="item"><a href="https://w2me.ru/it-blog/" target="_blank">Visit the partner site - W2ME.RU</a></div>
+      <div class="item"><a href="https://web.archive.org/web/20210126162828/https://w2me.ru/" target="_blank">Visit
+          the
+          partner site - W2ME.RU</a></div>
       <br />
     </div>
 
-    <div id="block-2" style='display: none;'>
-    	<div>Check out my <a href="https://github.com/SergioStrangeS?tab=repositories">Repositories</a>:</div>
+    <div id="block-2">
+      <div>Check out my <a href="https://github.com/SergioStrangeS?tab=repositories">Repositories</a>:</div>
       <div class="item"><a href="https://github.com/SergioStrangeS/DiscordWebhooks">Discord Webhooks</a></div>
       <div class="item"><a href="https://github.com/SergioStrangeS/VkSearchBot">VkSearchBot</a></div>
       <div class="item"><a href="https://github.com/SergioStrangeS/VkWeatherBot">VkWeatherBot</a></div>
-      <div class="item"><a href="https://drive.google.com/file/d/1lgkBaHLwRrwYj98TmDuTmw-wzGXgDgHf/view?usp=sharing">Stream Service</a></div>
+      <div class="item"><a
+          href="https://drive.google.com/file/d/1lgkBaHLwRrwYj98TmDuTmw-wzGXgDgHf/view?usp=sharing">Stream Service</a>
+      </div>
       <br />
     </div>
 
-    <div class="anykey" id="pressanykey" style='display: none;'>
-       Press any key to continue
-       <div class="cursor">_</div>
+    <div class="anykey" id="pressanykey">
+      Press any key to continue
+      <div class="cursor">_</div>
     </div>
   </div>
-   
-  <script>
-		var description = "If this is your first time seeing this screen, welcome to my personal page. There are no hard-to-load pages. I am Sergio Strangers, IT Specialist and Programmer. Continue:";
-		var str = description.split("");
-		var el = document.getElementById('description');
-		(function animate() {
-			str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running);
-			var running = setTimeout(animate, 10);
-		})();
-		
-		setTimeout(() => { document.getElementById('block-1').style.display = 'block'; }, 4000);
-		setTimeout(() => { document.getElementById('block-2').style.display = 'block'; }, 5000);
-		setTimeout(() => { document.getElementById('pressanykey').style.display = 'block'; }, 5000);
-	</script>
-   
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
- 	<script src="assets/js/snowscript.js"></script>
- 	<script src="assets/js/sounds.js"></script>
-	</body>
+
+  <script src="assets/js/preloader.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+  <script src="assets/js/snowscript.js"></script>
+  <script src="assets/js/sounds.js"></script>
+</body>
 
 </html>

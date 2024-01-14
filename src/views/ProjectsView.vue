@@ -1,23 +1,28 @@
 <template>
   <div class="row">
-    <div class="wrapper col-12 col-lg-8 my-auto">
+    <img src="@/assets/images/Clouds.png" alt="Clouds">
+    <div class="wrapper">
       <h1 class="wrapper-title tag"><span id="title"></span></h1>
       <p class="wrapper-description"><span id="desc"></span></p>
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link tag" href="#">
-            Hello world!
+            Hooks.js
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link tag" href="#">
-            Активные выходные
+            DiscordWebhooks
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tag" href="#">
+            Game-on-unity
           </a>
         </li>
       </ul>
       <p href="#" class="wrapper-continue"><span id="space"></span></p>
     </div>
-    <img class="d-none d-lg-block col-lg-4" src="@/assets/images/Crow.png" alt="Crow">
   </div>
 </template>
 
@@ -25,7 +30,7 @@
 import Typed from "typed.js";
 
 export default {
-  name: "AboutView",
+  name: 'ProjectView',
   data() {
     return {
       typedInstance: null,
@@ -43,7 +48,7 @@ export default {
         onComplete: (self) => {
           if (item === '#title') {
             this.initTyped('#desc', [
-              `Отчасти я еще немного занимаюсь личным блогом. Советую ознакомиться с творчеством данного типа.`
+              `Буду краток, тут покоются, все мои надежды и несбывшиеся мечты.`
             ]);
           } else if (item === '#desc') {
             this.initTyped('#space', ['Жмяк ‘space’ чтобы продолжить']);
@@ -62,13 +67,13 @@ export default {
     },
     spaceKey(event) {
       if (event.key === ' ' && this.isSkip) {
-        this.$router.push('contacts')
+        this.$router.push('about')
         console.log('редирект')
       }
     }
   },
   mounted() {
-    this.initTyped('#title', ['Заметки безумца'])
+    this.initTyped('#title', ['Кладбище несбывшихся надежд'])
 
     document.addEventListener('keydown', this.spaceKey)
   },
